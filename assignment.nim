@@ -9,6 +9,12 @@ var
 echo a, " ", b
 echo x, " ", y, " ", z
 
+#[
+var i, j, k: int
+i = j = k = 5
+echo i, " ", j, " ", k
+]#
+
 # Compound assignment
 a += b
 b -= a
