@@ -27,3 +27,4 @@ proc `=>` (x, y: int): int =
 echo 1 + 2 * 3, " ", 1 + 2 @* 3, " ", 1 + 2 => 3
 
 # Parenthesis
+echo (4 * 2) $+ 3
