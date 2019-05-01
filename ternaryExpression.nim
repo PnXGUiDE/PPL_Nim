@@ -16,3 +16,7 @@ template `?`*[T](cond: bool; p: BranchPair[T]): T =
   (if cond: p.then else: p.otherwise)
 
 echo 5 == 5 ? "Equal" ! "Not Equal"
+
+# Assignment using conditional expression
+var a: int = (0 == 1) ? 5 ! 4
+echo a
