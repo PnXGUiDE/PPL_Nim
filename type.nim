@@ -37,6 +37,11 @@ let
     a = 0.0      # a is of type ``float``
     b = 0.0'f32  # b is of type ``float32``
     c = 0.0'f64  # c is of type ``float64``
+
+#[
+    Constants
+]#
+
 #[
     Type Conversion
 ]#
