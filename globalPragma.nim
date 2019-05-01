@@ -10,4 +10,3 @@ proc func1(): int =
 
 echo globalPragma(), " ", globalPragma(), " ", globalPragma()
 echo func1(), " ", func1(), " ", func1()
-
