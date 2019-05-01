@@ -1,5 +1,7 @@
 # Unary expression
 var num: int = 5
+num += 1
+echo num
 inc(num)  # num = num + 1
 echo num
 dec(num)  # num = num - 1
