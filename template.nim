@@ -1,4 +1,4 @@
-template `??` (a, b: int): int =
+proc `??` (a, b: int): int =
   a + b
 
 echo 5 ?? 3

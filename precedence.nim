@@ -8,3 +8,15 @@ type
 
 echo low(MyRange), " ", high(MyRange)
 
+proc `$+` (x, y: int): int =
+  result = x + y
+
+echo 1 $+ 10 * 5, " ", 1 + 10 * 5
+
+proc `@*` (x, y: int): int =
+  result = x * y
+
+proc `=>` (x, y: int): int =
+  result = x * y
+
+echo 1 + 2 * 3, " ", 1 + 2 @* 3, " ", 1 + 2 => 3
