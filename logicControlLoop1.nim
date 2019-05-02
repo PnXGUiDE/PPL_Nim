@@ -6,4 +6,3 @@ var size: int = len(intList)
 while i < size:
   echo intList[i]
   inc i
-    
