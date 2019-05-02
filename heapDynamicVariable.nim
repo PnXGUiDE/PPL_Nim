@@ -18,3 +18,7 @@ intList[2] = 3
 var sum = intList[0] + intList[1] + intList[2]
 
 echo sum
+
+var a = [3, 5, 9]
+var aExp: array[0..2, int] = [3, 5, 9]
+# var a = [3, "a", 9.0]
