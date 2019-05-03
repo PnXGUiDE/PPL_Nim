@@ -41,6 +41,11 @@ let
 #[
     Constants
 ]#
+const m = 35
+# m = -27         # error 
+
+# var n = -5
+# const z = n + 7 # error 
 
 #[
     Type Conversion
@@ -72,3 +77,41 @@ type
   
 var g = south     # `g` is of type `Direction`; its value is `south`
 echo g            # writes "south" to `stdout`
+
+#[
+    Ordinal type special operations
+
+NOTE: Integers, bool, characters and enumeration types 
+        (and subranges of these types) belong to ordinal types
+        except uint and uint64 are not ordinal type
+]#
+var 
+    a1: int = 1
+    a2 = 2
+    a3 = 3
+    a4 = 4
+# a1++ # Error
+inc(a1) #=> work like a++
+echo a1
+inc(a1, 3) #=> a = a + 3
+# it also has dec = decrease
+
+#[
+    Automatic type conversion is performed in expressions where different kinds of integer types 
+    are used: the smaller type is converted to the larger.
+
+    Nim has only widening type conversions
+
+    ref: https://nim-lang.github.io/Nim/manual.html#type-relations-convertible-relation
+]#
+var myInt16 = 5i16
+var myInt: int
+var myFloat: float = 4.2
+let test1 = myInt16 + 34     # of type ``int16``
+let test2 = myInt16 + myInt  # of type ``int``
+let test3 = myInt16 + 2i32   # of type ``int32``
+
+#let test4 = myFloat + myInt
+
+
+

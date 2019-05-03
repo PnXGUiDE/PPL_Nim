@@ -43,6 +43,10 @@ else :
 let
     t = 31
     u = 99
+
+let
+    bool1: bool = true
+    bool2: bool = false
   
 echo "t is greater than u: ", t > u
 echo "t is smaller than u: ", t < u
@@ -58,3 +62,20 @@ let
 
 echo a < b
 echo a < c
+
+#[ The operators not, and, or, xor, <, <=, >, >=, !=, == are defined for the bool type. ]#
+
+if (ord(bool1) == 0):
+    echo "ord(false) == 0"
+if (ord(bool2) == 1):
+    echo "ord(true) == 1"
+
+
+#[
+    ord(false) == 0 and ord(true) == 1
+]#
+
+
+#[
+    Cstring
+]#
