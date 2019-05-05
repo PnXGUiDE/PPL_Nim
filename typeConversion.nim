@@ -22,3 +22,4 @@ var myInt: int
 echo myInt16 + 34, " ", type(myInt16 + 34)
 echo myInt16 + myInt, " ", type(myInt16 + myInt)
 echo myInt16 + 2i32, " ", type(myInt16 + 2i32)
+echo myInt16 + 1i8, " ", type(myInt16 + 1i8)

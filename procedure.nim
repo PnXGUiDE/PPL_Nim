@@ -11,3 +11,8 @@ proc add(a, b: int): int =      # Parameter Profile: a -> int, b -> int
 voidProcedure()
 echo myProcedure()
 echo add(5, 3)
+
+var a: int = 2
+var b: int = 3
+
+echo add(a, b)    # actual parameter
