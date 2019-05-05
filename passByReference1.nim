@@ -1,3 +1,4 @@
+# use object
 type
   MyObj = ref
     object

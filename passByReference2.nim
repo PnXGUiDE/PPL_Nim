@@ -1,3 +1,4 @@
+# use pointer (reference type)
 proc changeVal(x: ptr int) =
   x[] = 9
 

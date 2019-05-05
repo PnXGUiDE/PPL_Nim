@@ -1,3 +1,5 @@
+# naive method
+
 template computeSeries(x: untyped): untyped =
   var result = 0
   for i in x:
