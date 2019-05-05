@@ -1,8 +1,9 @@
 # Implicit Static Type Binding
-var a = "5"     
+var a = "5"
 # a = 3
-let b = 4       
-const c = 3     
+let b = 4  
+const c = 3
+# c = 5
 # echo a + b
 echo b + c
 
@@ -19,6 +20,7 @@ i = 3
 j = 4
 k = 5
 # i, j, k = 3, 4, 5
+echo i, " ", j, " ", k
 
 let
   m = "foo"
@@ -30,3 +32,8 @@ const
 # let and const keyword
 let input = readLine(stdin)
 # const input = readLine(stdin)   # Need compile time evaluation
+
+#[
+import typetraits
+echo type(a)
+]#
