@@ -86,10 +86,22 @@ fruits.add("Banana")          # sequence 'fruits' is dynamically expandable duri
 fruits.add("Mango")
 
 proc openArray(oa: openArray[string]) =
-    echo "Length : ",oa.len , "Array : ", repr(oa)
+    echo "Length : ", oa.len , " Array : ", repr(oa)
 
 openArray(["Hello","World","And","Humanity"])
 openArray(["Smaller","Size"])
+
+
+#[
+    Varargs
+
+    NOTE: Varargs is only be used for parameter like an Open arrays
+]#
+proc myWriteln(a: varargs[string]) =
+    echo a
+  
+myWriteln("abc", "def", "xyz")
+# is transformed by the compiler to: ["abc", "def", "xyz"]
 
 #[
     Unchecked Array
@@ -97,4 +109,92 @@ openArray(["Smaller","Size"])
     is a special kind of array where its bounds are not checked.
 ]#
 
+#[
+    Slices
+]#
 
+var
+    slice1 = "Nim is a progamming language"
+    slice2 = "Slices are useless."
+  
+echo slice1[7..12] # --> 'a prog'
+slice2[11..^2] = "useful"
+echo slice2 # --> 'Slices are useful.'
+
+#[
+    "Slices are useless."
+    |          |     |
+    0         11    17   using indices
+    ^19        ^8    ^2   using ^ indices from back to front
+]#
+
+#[
+    Tuples
+]#
+type
+    Person = tuple[name: string, age: int]
+
+var person1: Person
+# You can declare var person: tuple[street: string, number: int] instead.
+var person2: Person
+person1 = (name: "Peter", age: 30)
+person2 = ("Tom", 20)
+echo person1, " ", person2
+echo person1[0] # "Peter"
+echo person1[1] # 30
+
+#[
+    Multi Dimensional Array
+]#
+# Rectangular Array Fixed Length
+type
+    MultiDimension = array[0..1, array[5, int]]
+var multiArray: MultiDimension
+multiArray = [  
+                [1, 2, 3, 4, 5],
+                [1, 2, 3, 4, 5]
+            ]
+echo multiArray
+# Rectangular Array Dynamic Length
+type
+    RecDynamic = seq[array[0..1,int]]
+var recDynamic: RecDynamic
+recDynamic = @[
+                [1, 2],
+                [3, 4]
+            ]
+echo recDynamic
+# Jagged Array Fixed Length
+type
+    JaggedArray = array[0..1, seq[int]]
+var jaggedArray: JaggedArray
+jaggedArray = [
+                @[1, 2, 3],
+                @[1, 2, 3, 4, 5]
+            ]
+echo jaggedArray
+# Jagged Array Dynamic Length
+type
+    JagDynamic = seq[seq[int]]
+var jaggedDynamic: JagDynamic
+jaggedDynamic = @[
+                @[1, 3, 5]
+            ]
+echo jaggedDynamic
+
+
+proc printf(formatstr: cstring) {.importc: "printf", varargs,
+                                  header: "<stdio.h>".}
+printf("----------- %s ------------\n", "Array two dimesion")
+
+for i in low(multiArray)..high(multiArray):
+    for j in low(multiArray[0])..high(multiArray[0]):
+        printf("%d ",multiArray[i][j])
+    printf("\n")
+
+printf("----------- %s ------------\n", "Jagged Array")
+
+for i in low(jaggedArray)..high(jaggedArray):
+    for j in low(jaggedArray[i])..high(jaggedArray[i]):
+        printf("%d ",jaggedArray[i][j])
+    printf("\n")

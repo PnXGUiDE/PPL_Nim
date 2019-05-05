@@ -78,4 +78,31 @@ if (ord(bool2) == 1):
 
 #[
     Cstring
+
+    String in C Style
 ]#
+proc printf(formatstr: cstring) {.importc: "printf", varargs,
+                                  header: "<stdio.h>".}
+printf("This works %s \n", "as expected")
+
+#[
+    Structured types
+]#
+type
+    MySeq = object
+      len, cap: int
+      data: array[5, int]
+#[
+    Same as this C code : 
+    typedef struct {
+        int len;
+        int cap;
+        int data[];
+    } MySeq;
+]#
+var myStruct: MySeq
+myStruct.len = 5
+myStruct.cap = 5
+myStruct.data = [1, 2, 3, 4, 5]
+echo myStruct.len, " ", myStruct.cap, " ", repr(myStruct.data)
+
