@@ -1,0 +1,4 @@
+proc doNothing() =
+  discard
+
+doNothing()
