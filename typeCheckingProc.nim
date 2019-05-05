@@ -24,6 +24,7 @@ takeInt(x_int32)      # coercion
 # takeInt(x_char)
 
 # takeFloat(x_int)
+takeFloat(5)           # literal can be pass
 takeFloat(x_float)
 takeFloat(x_float32)   # coercion
 takeFloat(x_float64)   # coercion
