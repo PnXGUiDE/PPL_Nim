@@ -25,7 +25,7 @@ let z = [1.0, 2, 3, 4] # the type of z is array[0..3, float]
 for i in 0..len(x)-1:
     echo x[i]
 
-echo "Lowwerbound: ", low(y), " Upperbound: ", high(y)
+echo "Lowerbound: ", low(y), " Upperbound: ", high(y)
 y.add(7)
 echo "Upperbound After Add: ", high(y)
 for i in low(y)..high(y):
