@@ -22,3 +22,4 @@ echo a, " ", b
 var c: MyRange = 5
 var d: MySubrange = c
 echo c, " ", d
+

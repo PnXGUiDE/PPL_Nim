@@ -5,5 +5,5 @@ proc func1(): int =
   return 1
 
 proc func2(): int {.noSideEffect.} =
-  # x = 5       # manipulate other variable
+  x = 5       # manipulate other variable
   return 1

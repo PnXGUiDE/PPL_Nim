@@ -1,5 +1,5 @@
 # implement own iterator method
-iterator items*(a: string): char {.inline.} =
+iterator items(a: string): char {.inline.} =
   var i = 0
   while i < len(a):
     yield a[i]  # return value and continue its increment
@@ -14,5 +14,3 @@ iterator count5(): int =
 
 for x in count5():
   echo x
-
-

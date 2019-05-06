@@ -5,10 +5,10 @@ var
   x = 5
   y = 4
 
-if x == 4:
-  echo "x is 4"
+if x <= 4:
+  echo "x is or less than 4"
 else:
-  echo "x is not 4"
+  echo "x is more than 4"
 
 if x == 4:
   echo "x is 4"
@@ -18,14 +18,16 @@ elif y == 4:
 else:
   echo "neither x nor y is 4"
 
+
 # When statement
+
 #[
 var
   a = 5
   b = 4
 ]#
 
-const     # need to be constant
+let     # need to be constant
   a = 5
   b = 4
 
@@ -36,4 +38,3 @@ elif b == 4:
   echo "b is immutable 4 ", a
 else:
   echo "neither a nor b is immutable 4"
-

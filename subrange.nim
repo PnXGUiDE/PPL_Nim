@@ -2,8 +2,10 @@ type
   MyIntRange = range[11..15]
   MyFloatRange = range[0.0..Inf]
 
-var newInt: MyIntRange = 15
+var x = 15
+var newInt: MyIntRange = x
 echo newInt
+
 
 # var newInt2: MyIntRange = 10
 # echo newInt2

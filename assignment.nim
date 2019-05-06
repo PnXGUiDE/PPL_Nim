@@ -6,18 +6,18 @@ var
   y = 5.0
   z = 'c'
 
+a = 5
+
 echo a, " ", b
 echo x, " ", y, " ", z
 
-#[
-var i, j, k: int
-i = j = k = 5
-echo i, " ", j, " ", k
-]#
+# var i, j, k: int
+# i = j = k = 5
+# echo i, " ", j, " ", k
 
 # Compound assignment
-a += b
-b -= a
+a += b    # a = a + b
+b -= a    # b = b - a
 echo a, " ", b
 a *= 2
 # b /= 5

@@ -1,4 +1,5 @@
 # When nimvm statement
+
 proc someProcThatMayRunInCompileTime(): bool =
   when nimvm:
     # This branch is taken at compile time.

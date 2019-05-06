@@ -15,7 +15,6 @@ m.data = 10
 echo n.data
 
 type
-  # Data = array[3, int]
   Data = array[0..3, int]
 
 var datum = cast[ptr Data](alloc(sizeof(Data)))

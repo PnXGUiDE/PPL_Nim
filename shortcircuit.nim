@@ -14,10 +14,12 @@ while true:
 
 echo arr
 
+
 var someInt{.global.}: int = 0
 proc setSomeInt(): int =
   someInt = 5
   return 0
 
 echo $(true or setSomeInt() != 0), " ", someInt
-# echo $(false or setSomeInt() != 0), " ", someInt
+echo $(false or setSomeInt() != 0), " ", someInt
+

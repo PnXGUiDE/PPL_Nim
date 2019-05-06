@@ -7,7 +7,7 @@ iterator count2(): int {.closure.} =
   inc x
   yield x
 
-# {.closure.} = pointer as parameter
+# {.closure.} = procedure as parameter
 proc invoke(iter: iterator(): int {.closure.}) =
   for x in iter():
     echo x
