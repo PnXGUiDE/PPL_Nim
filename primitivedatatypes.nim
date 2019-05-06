@@ -106,3 +106,21 @@ myStruct.cap = 5
 myStruct.data = [1, 2, 3, 4, 5]
 echo myStruct.len, " ", myStruct.cap, " ", repr(myStruct.data)
 
+#[
+    Type Errors
+]#
+let 
+    t1: int = 5
+    t2: float = 5.0
+    t3: string = "5"
+    t4: char = '5'
+var 
+    a1: int
+    a2: float
+    a3: string
+    a4: char
+
+#a2 = t1 + t2 #error
+#a1 = 5.0 #error
+#a3 = t4 + t3 #error
+echo a3
