@@ -198,3 +198,36 @@ for i in low(jaggedArray)..high(jaggedArray):
     for j in low(jaggedArray[i])..high(jaggedArray[i]):
         printf("%d ",jaggedArray[i][j])
     printf("\n")
+
+var 
+    array1: array[2, int]
+    array2: array[2, int]
+    array3: array[2, int]
+    array4: array[4, int]
+array1 = [1 , 2]
+array2 = [1 , 2]
+if(array1 == array2):
+    echo "Equals"
+else :
+    echo "Not Equals"
+
+array3 = [5, 5]
+array2 = array3
+echo repr(array2) # copy array
+
+#var addArray = array1 + array2
+#var minusArray = array1 - array2
+array4 = [1, 2, 3, 4]
+echo array4[0..1] # [1,2]
+echo array4[low(array4)..high(array4)] # [1, 2, 3, 4]
+
+# don't have concatenation for array but you can implement your own
+var
+    arr1: array[2, int] = [1, 2]
+    arr2: array[4, int] = [3, 4, 5, 6]
+proc concat[I1, I2: static[int]; T](a: array[I1, T], b: array[I2, T]): array[I1 + I2, T] =
+    result[0..a.high] = a
+    result[a.len..result.high] = b
+var testConcat = concat(arr1,arr2)
+echo testConcat
+
